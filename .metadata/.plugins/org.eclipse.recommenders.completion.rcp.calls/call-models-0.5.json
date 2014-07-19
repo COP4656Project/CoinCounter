@@ -1,0 +1,102 @@
+{
+  "/Applications/eclipse/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-19/android.jar": {
+    "location": "/Applications/eclipse/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-19/android.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Applications/eclipse/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-19/android.jar\u0027. Neither fingerprint \u00277f972d2aa0fcb741fc84a9a10c98555f6f431a7a\u0027 nor symbolic name \u0027android\u0027 are known."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment1/gen": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment1/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment1/gen\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment2/gen": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment2/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment2/gen\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_3/libs/android-support-v7-appcompat.jar": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_3/libs/android-support-v7-appcompat.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_3/libs/android-support-v7-appcompat.jar\u0027. Neither fingerprint \u00276c77cd21db2ca4fe31aa1fd31417fe63be29e733\u0027 nor symbolic name \u0027android-support-v7-appcompat\u0027 are known."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment3/src": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment3/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment3/src\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment3/gen": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment3/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment3/gen\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/libs/android-support-v7-appcompat.jar": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/libs/android-support-v7-appcompat.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/libs/android-support-v7-appcompat.jar\u0027. Neither fingerprint \u00276c77cd21db2ca4fe31aa1fd31417fe63be29e733\u0027 nor symbolic name \u0027android-support-v7-appcompat\u0027 are known."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/libs/android-support-v4.jar": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/libs/android-support-v4.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/libs/android-support-v4.jar\u0027. Neither fingerprint \u0027cb6883d96005bc85b3e868f204507ea5b4fa9bbf\u0027 nor symbolic name \u0027android-support-v4\u0027 are known."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment4/gen": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment4/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment4/gen\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment4/src": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment4/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment4/src\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/gen": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/gen\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_2/libs/android-support-v7-appcompat.jar": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_2/libs/android-support-v7-appcompat.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_2/libs/android-support-v7-appcompat.jar\u0027. Neither fingerprint \u00276c77cd21db2ca4fe31aa1fd31417fe63be29e733\u0027 nor symbolic name \u0027android-support-v7-appcompat\u0027 are known."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/src": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/src\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/libs/android-support-v4.jar": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/libs/android-support-v4.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/libs/android-support-v4.jar\u0027. Neither fingerprint \u0027cb6883d96005bc85b3e868f204507ea5b4fa9bbf\u0027 nor symbolic name \u0027android-support-v4\u0027 are known."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Project1/src": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Project1/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Project1/src\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Project1/gen": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Project1/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Project1/gen\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_6/libs/android-support-v7-appcompat.jar": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_6/libs/android-support-v7-appcompat.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_6/libs/android-support-v7-appcompat.jar\u0027. Neither fingerprint \u00276c77cd21db2ca4fe31aa1fd31417fe63be29e733\u0027 nor symbolic name \u0027android-support-v7-appcompat\u0027 are known."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/OpenCV Library - 2.4.9/bin/opencv library - 2.4.9.jar": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/OpenCV Library - 2.4.9/bin/opencv library - 2.4.9.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/OpenCV Library - 2.4.9/bin/opencv library - 2.4.9.jar\u0027. Neither fingerprint \u00278a5de08eea3dc680c3198bb81989a4e19c5109fa\u0027 nor symbolic name \u0027opencv library - 2.4.9\u0027 are known."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/GroupProject/gen": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/GroupProject/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/GroupProject/gen\u0027. Skipped."
+  },
+  "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_7/libs/android-support-v7-appcompat.jar": {
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_7/libs/android-support-v7-appcompat.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_7/libs/android-support-v7-appcompat.jar\u0027. Neither fingerprint \u00276c77cd21db2ca4fe31aa1fd31417fe63be29e733\u0027 nor symbolic name \u0027android-support-v7-appcompat\u0027 are known."
+  }
+}

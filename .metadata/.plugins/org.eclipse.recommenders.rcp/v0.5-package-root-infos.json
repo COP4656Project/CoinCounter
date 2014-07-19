@@ -1,0 +1,613 @@
+[
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "92ebbef37d1a48a2e460d258e1b7a141a0ca6a28",
+    "jarFileModificationDate": "2013-10-10T14:22:21-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6c77cd21db2ca4fe31aa1fd31417fe63be29e733",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7/libs/android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6aac3a170091ffb8ce43705c47915a7072a6fbc5",
+    "jarFileModificationDate": "2013-10-10T14:28:14-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6c77cd21db2ca4fe31aa1fd31417fe63be29e733",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_7/libs/android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "appcompat_v7_7",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e81688b366f8ec3b242508ca9f69424ffb8675eb",
+    "jarFileModificationDate": "2014-07-15T18:27:43-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_7/bin/appcompat_v7_7.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c5d7b7bfab9b433c4b62aebbe76a564b6bcf8192",
+    "jarFileModificationDate": "2013-08-07T22:11:00-04:00",
+    "location": "/System/Library/Java/Extensions/mlibwrapper_jai.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "06b897f357f111e205017803b1d10f972e8f1075",
+    "jarFileModificationDate": "2013-08-07T22:15:41-04:00",
+    "location": "/System/Library/Java/Extensions/j3dcore.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "51dbde992ee8e0ee2e9e1be38fcc6d3295ebc66e",
+    "jarFileModificationDate": "2013-08-07T22:16:58-04:00",
+    "location": "/System/Library/Java/Extensions/AppleScriptEngine.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6c77cd21db2ca4fe31aa1fd31417fe63be29e733",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_2/libs/android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "appcompat_v7_6",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e81688b366f8ec3b242508ca9f69424ffb8675eb",
+    "jarFileModificationDate": "2014-07-15T18:27:42-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_6/bin/appcompat_v7_6.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "appcompat_v7_3",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "afc90261e6521427a0f821d1889a5dd0a9fa643a",
+    "jarFileModificationDate": "2014-07-15T18:27:41-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_3/bin/appcompat_v7_3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8dd971cde724dfec556b5701ff3c9b8bbd262677",
+    "jarFileModificationDate": "2013-10-10T14:38:59-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6c77cd21db2ca4fe31aa1fd31417fe63be29e733",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/libs/android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e7533ef29283d456ddcc700ad2ccdd0c3452e464",
+    "jarFileModificationDate": "2013-08-07T22:15:41-04:00",
+    "location": "/System/Library/Java/Extensions/j3dutils.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_2/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f4f6d0685c8372195356c55b8578565fe2487825",
+    "jarFileModificationDate": "2014-06-15T12:15:26-04:00",
+    "location": "/Applications/eclipse/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-18/android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
+    "jarFileModificationDate": "2013-10-10T14:22:21-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ea45c5d84b402679dd74825b0806a269a3cd4aee",
+    "jarFileModificationDate": "2013-10-10T14:32:12-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-06-02T17:01:35-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment3/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "appcompat_v7",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "afc90261e6521427a0f821d1889a5dd0a9fa643a",
+    "jarFileModificationDate": "2014-07-15T18:27:40-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7/bin/appcompat_v7.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_7/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-05-13T10:24:03-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment1/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d57b4588c1c302ad017b0cf25de95dfb1b22e8fc",
+    "jarFileModificationDate": "2013-11-28T00:22:06-05:00",
+    "location": "/System/Library/Java/Extensions/MRJToolkit.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "appcompat_v7_2",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "afc90261e6521427a0f821d1889a5dd0a9fa643a",
+    "jarFileModificationDate": "2014-07-15T18:27:40-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_2/bin/appcompat_v7_2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6c77cd21db2ca4fe31aa1fd31417fe63be29e733",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_6/libs/android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-05-22T18:02:22-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment5/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-05-22T18:02:22-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/Assignment2/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_3/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0bb518175e479ab8291700f8e33ea16fccf4ae9d",
+    "jarFileModificationDate": "2013-10-10T14:38:52-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7f972d2aa0fcb741fc84a9a10c98555f6f431a7a",
+    "jarFileModificationDate": "2014-02-21T11:11:26-05:00",
+    "location": "/Applications/eclipse/adt-bundle-mac-x86_64-20140321/sdk/platforms/android-19/android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6c77cd21db2ca4fe31aa1fd31417fe63be29e733",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_3/libs/android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6d342cc086f5c4bf834664ddcdfbb4f4166446a7",
+    "jarFileModificationDate": "2013-10-10T14:22:21-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_6/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1131fd02e5ae3337bb6f58f41b5bd785bfc3b2c2",
+    "jarFileModificationDate": "2013-10-10T14:32:03-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a85d5af49e138a0adefc26bf22d2cfc8c754e6dd",
+    "jarFileModificationDate": "2013-08-07T22:11:25-04:00",
+    "location": "/System/Library/Java/Extensions/jai_codec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "opencv library - 2.4.9",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ef08d4965890ecb259421f7890ed456adc889c86",
+    "jarFileModificationDate": "2014-07-15T18:27:31-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/OpenCV Library - 2.4.9/bin/opencv library - 2.4.9.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f0175c4c28f08b9236108499c33d6542c0bcd8b4",
+    "jarFileModificationDate": "2013-08-07T22:15:41-04:00",
+    "location": "/System/Library/Java/Extensions/j3daudio.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "21240ab7c12f378058cbb7a9b2f5b762dd30e1b8",
+    "jarFileModificationDate": "2013-08-07T22:11:25-04:00",
+    "location": "/System/Library/Java/Extensions/jai_core.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "appcompat_v7_4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e81688b366f8ec3b242508ca9f69424ffb8675eb",
+    "jarFileModificationDate": "2014-07-15T18:27:42-04:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_4/bin/appcompat_v7_4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "17cb77e6b97b7d53eac15eb338d289d6ad70d64a",
+    "jarFileModificationDate": "2013-10-10T14:36:08-04:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6c77cd21db2ca4fe31aa1fd31417fe63be29e733",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_5/libs/android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-01-17T12:31:30-05:00",
+    "location": "/Users/adamgreenstein/Documents/FSU Work/COP4656/work/appcompat_v7_5/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a84551888636d4e693dc9b483ad69a6a78ad9d74",
+    "jarFileModificationDate": "2013-11-28T00:22:07-05:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "005810d865dab9bd200ea485d0e44c18a329aa26",
+    "jarFileModificationDate": "2013-08-07T22:15:41-04:00",
+    "location": "/System/Library/Java/Extensions/vecmath.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "63fbdd9c7e93573cc15ee487950217886be2aef6",
+    "jarFileModificationDate": "2013-11-28T00:22:08-05:00",
+    "location": "/System/Library/Java/Extensions/dns_sd.jar",
+    "javaRuntime": true
+  }
+]
