@@ -52,36 +52,6 @@ public class MainActivity extends ActionBarActivity {
 			
 		});
 		
-		
-		//// OpenCV code that counts circles from an image, needs to be moved elsewhere
-		
-		/*if (!OpenCVLoader.initDebug()) {
-	        // Handle initialization error
-			
-	    }
-
-		Mat image = null;
-		
-		try {
-			image = Utils.loadResource(this, R.drawable.one, Highgui.CV_LOAD_IMAGE_COLOR);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		Imgproc.cvtColor(image, image, Imgproc.COLOR_RGBA2GRAY);
-		
-		Mat circles = new Mat();
-		Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT, 1d, 600d);
-		
-		if (circles != null)
-		{
-			int value = circles.cols();
-		
-			TextView text = (TextView)findViewById(R.id.textView1);
-			text.setText("Number of coins " + value);
-		}*/
-		
 	}
 
 	@Override
