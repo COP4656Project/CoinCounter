@@ -10,6 +10,7 @@
     <string name="nickle">Nickles: </string>
     <string name="dime">Dimes: </string>
     <string name="penny">Pennies: </string>
+    <string name="capture">Capture</string>
     
 
 </resources>

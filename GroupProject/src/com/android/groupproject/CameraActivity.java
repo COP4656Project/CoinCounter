@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.widget.FrameLayout;
+import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 public class CameraActivity extends Activity {
 	private Camera mCamera;
@@ -24,11 +27,22 @@ public class CameraActivity extends Activity {
 	        // Camera is not available (in use or does not exist)
 	    }
 	  
-
         // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
         FrameLayout preview = (FrameLayout) findViewById(R.id.camera_layout);
         preview.addView(mPreview);
+        
+       Button capture = (Button) findViewById(R.id.capture);
+       
+       capture.setOnClickListener(new OnClickListener() {
+
+		@Override
+		public void onClick(View arg0) {
+			mCamera.takePicture(null, null, null);
+			
+		}
+    	   
+       });
 
 	}
 	
