@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="" key="selection"/>
+		<item value="Count" key="selection"/>
 		<list key="findhistory">
-			<item value="hello"/>
-			<item value="hellow"/>
-			<item value="DELA"/>
-			<item value="dela"/>
-			<item value="col"/>
-			<item value="Col"/>
-			<item value="darkact"/>
-			<item value="dark"/>
+			<item value="Count"/>
+			<item value="count"/>
+			<item value="co"/>
+			<item value="onresu"/>
+			<item value="list"/>
+			<item value="open"/>
+			<item value="camerap"/>
+			<item value="pre"/>
 		</list>
 		<list key="replacehistory">
 		</list>

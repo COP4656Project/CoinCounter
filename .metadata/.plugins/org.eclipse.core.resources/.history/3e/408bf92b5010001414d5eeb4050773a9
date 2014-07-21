@@ -1,0 +1,58 @@
+package com.android.groupproject;
+import java.util.ArrayList;
+import java.util.List;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.hardware.Camera;
+import org.opencv.imgproc.Imgproc;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.core.Size;
+import org.opencv.highgui.Highgui;
+import org.opencv.android.Utils;
+import org.opencv.core.Core;
+import org.opencv.android.OpenCVLoader;
+import android.widget.TextView;
+import android.widget.ImageView;
+
+public class ImageProcess {
+	public int numberOfCircles = 0;
+	public ArrayList<Integer> scaledRadius;
+	
+	public Camera.PictureCallback ProcessCallBack = new Camera.PictureCallback() {
+
+		@Override
+		public void onPictureTaken(byte[] data, Camera cam) {
+			
+			if (!OpenCVLoader.initDebug()) {
+		        // Handle initialization error
+		    }
+			
+			Bitmap bmp = BitmapFactory.decodeByteArray(data , 0, data.length);
+			Mat image = new Mat();
+			Bitmap myBitmap32 = bmp.copy(Bitmap.Config.ARGB_8888, true);
+			Utils.bitmapToMat(myBitmap32, image);
+			
+			Imgproc.cvtColor(image, image, Imgproc.COLOR_BGR2GRAY);
+			Mat circles = new Mat();
+			
+			// This is working now it seems
+			Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT,1,50,165,50,50,300);
+			
+			numberOfCircles = circles.cols();
+			for (int i = 0; i < numberOfCircles; ++i) {
+				
+			}
+			
+			
+		}	
+	};
+	
+	public ImageProcess() {
+		scaledRadius = new ArrayList<Integer>();
+	}
+	
+	
+
+}

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.content.Context;
 import android.widget.Button;
+import android.widget.TextView;
 import android.view.View.OnClickListener;
 import android.content.Intent;
 import com.android.groupproject.CameraActivity;
@@ -25,7 +26,8 @@ import org.opencv.core.Core;
 import org.opencv.android.OpenCVLoader;
 
 public class MainActivity extends ActionBarActivity {
-
+	private CoinCounter coins;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -39,6 +41,13 @@ public class MainActivity extends ActionBarActivity {
 		// Register launch camera Button
 		Button launchCamera = (Button) findViewById(R.id.launch_camera_btn);
 		final Context mainContext = this;
+		
+		coins = CoinCounter.GetCounter();
+		coins.SetUIElements((TextView)findViewById(R.id.quarter_count),
+							(TextView)findViewById(R.id.nickle_count),
+							(TextView)findViewById(R.id.penny_count),
+							(TextView)findViewById(R.id.dime_count)
+							);
 		
 		launchCamera.setOnClickListener(new OnClickListener() {
 
@@ -72,6 +81,14 @@ public class MainActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		if (coins != null) {
+			coins.UpdateUI();
+		}
 	}
 
 	/**

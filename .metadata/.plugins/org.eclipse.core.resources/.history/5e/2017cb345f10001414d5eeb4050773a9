@@ -1,0 +1,97 @@
+package com.android.groupproject;
+
+import java.util.ArrayList;
+
+import android.widget.TextView;
+
+public class CoinCounter {
+	private static CoinCounter instance = null;
+	private int quarterCount = 0;
+	private int nickleCount = 0;
+	private int dimeCount = 0;
+	private int pennyCount = 0;
+	private int largest = 0;
+	private ArrayList<Double> coinList;
+	
+	private TextView quarter;
+	private TextView nickel;
+	private TextView dime;
+	private TextView penny;
+	
+	
+	private final double QUARTER_DIAM = 95.5;
+	private final double NICKLE_DIAM = 83.5;
+	private final double DIME_DIAM = 70.5;
+	private final double PENNY_DIAM = 75.0;
+	
+	private final double ERROR_MARGIN = 2.0;
+	
+	// Singleton Constructor
+	public static CoinCounter GetCounter() {
+		if (instance == null) {
+			instance = new CoinCounter();
+			return instance;
+		} else {
+			return instance;
+		}
+	}
+	
+	private CoinCounter() {
+		coinList = new ArrayList<Double>();
+	}
+	
+	public void SetNextBatch(ArrayList<Double> coins) {
+		coinList.clear();
+		
+		// Get different coins here
+		coinList = coins;	
+	}
+	
+	public void SetLargest(int i) {
+		// 1 = quarter, 2 = nickle, 3 = penny, 4 = dime
+		largest = i;
+	}
+	
+	public void UpdateUI() {
+		quarter.setText("" + quarterCount);
+		dime.setText("" + dimeCount);
+		nickel.setText("" + nickleCount);
+		penny.setText("" + pennyCount);
+	}
+	
+	public void SetUIElements(TextView quarters, TextView nickles, TextView pennies, 
+			TextView dimes) {
+		this.quarter = quarters;
+		this.nickel = nickles;
+		this.dime = dimes;
+		this.penny = pennies;
+	}
+	
+	private void UpdateCount() {
+		
+		double quarter_max, quarter_min;
+		double dime_max, dime_min;
+		double penny_max, penny_min;
+		double nickel_max, nickel_min;
+		
+		double scale_up = 0;
+		
+		switch(largest) {
+			case 1:
+				scale_up = 100 - QUARTER_DIAM;
+				break;
+			case 2:
+				scale_up = 100 - NICKLE_DIAM;
+				break;
+			case 3:
+				scale_up = 100 - DIME_DIAM;
+				break;
+			default:
+				scale_up = 100 - PENNY_DIAM;
+				break;
+		}
+		
+		quarter_max = QUARTER_DIAM + scale_up + ERROR_MARGIN;
+		quarter_min = QUARTER_DIAM + scale_up - ERROR_MARGIN;
+	}
+}

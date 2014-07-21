@@ -1,0 +1,51 @@
+package com.android.groupproject;
+
+import java.util.ArrayList;
+
+import android.widget.TextView;
+
+public class CoinCounter {
+	private static CoinCounter instance = null;
+	private int quarterCount = 0;
+	private int nickleCount = 0;
+	private int dimeCount = 0;
+	private int pennyCount = 0;
+	private int largest = 0;
+	private ArrayList<Double> coinList;
+	
+	private TextView quarter;
+	
+	// Singleton Constructor
+	public static CoinCounter GetCounter() {
+		if (instance == null) {
+			instance = new CoinCounter();
+			return instance;
+		} else {
+			return instance;
+		}
+	}
+	
+	private CoinCounter() {
+		coinList = new ArrayList<Double>();
+	}
+	
+	public void SetNextBatch(ArrayList<Double> coins) {
+		coinList.clear();
+		
+		// Get different coins here
+		coinList = coins;	
+	}
+	
+	public void SetLargest(int i) {
+		// 1 = quarter, 2 = nickle, 3 = penny, 4 = dime
+		largest = i;
+	}
+	
+	public void UpdateUI() {
+		quarter.setText("" + quarterCount);
+	}
+	
+	public void SetUIElements(TextView quarters) {
+		this.quarter = quarters;
+	}
+}

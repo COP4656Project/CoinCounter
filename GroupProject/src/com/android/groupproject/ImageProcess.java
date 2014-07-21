@@ -1,56 +1,85 @@
 package com.android.groupproject;
+import java.util.ArrayList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.hardware.Camera;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.opencv.core.Size;
 import org.opencv.highgui.Highgui;
 import org.opencv.android.Utils;
 import org.opencv.core.Core;
 import org.opencv.android.OpenCVLoader;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 public class ImageProcess {
 	public int numberOfCircles = 0;
-	public TextView label;
+	private CoinCounter coins;
+	private ArrayList<Double> scaledRadius;
+	public ArrayList<Double> adjustedRadius;
 	
 	public Camera.PictureCallback ProcessCallBack = new Camera.PictureCallback() {
 
 		@Override
-		public void onPictureTaken(byte[] data, Camera arg1) {
+		public void onPictureTaken(byte[] data, Camera cam) {
+			
+			double max = 0;
+			scaledRadius.clear();
+			adjustedRadius.clear();
 			
 			if (!OpenCVLoader.initDebug()) {
 		        // Handle initialization error
-				
 		    }
 			
-			/*Bitmap bmp = BitmapFactory.decodeByteArray(data , 0, data.length);
-			Mat image = new Mat(bmp.getHeight(),bmp.getWidth(),CvType.CV_8UC3);
+			Bitmap bmp = BitmapFactory.decodeByteArray(data , 0, data.length);
+			Mat image = new Mat();
 			Bitmap myBitmap32 = bmp.copy(Bitmap.Config.ARGB_8888, true);
-			Utils.bitmapToMat(myBitmap32, image);*/
+			Utils.bitmapToMat(myBitmap32, image);
 			
-			Mat image = new Mat(480, 320, CvType.CV_8UC1);
-			image.put(0, 0, data);
-			
-			
-			Imgproc.cvtColor(image, image, Imgproc.COLOR_YUV420sp2GRAY);
-			
+			Imgproc.cvtColor(image, image, Imgproc.COLOR_BGR2GRAY);
 			Mat circles = new Mat();
-			Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT, 1d, 600d);
 			
-			if (circles != null)
-			{
-				numberOfCircles = circles.cols();
+			// This is working now it seems
+			Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT,1,50,165,50,50,300);
+		
+			numberOfCircles = circles.cols();
+			
+			Log.v("cirles","Number of circles " + circles.cols());
+			
+			for (int i = 0; i < numberOfCircles; ++i) {
+				 double vCircle[] = circles.get(0,i);
+				 double radius;
+				 
+				 if (vCircle == null)
+			            break;
+				radius = (double)Math.round(vCircle[2]);
+				
+				if (max < radius) {
+					max = radius;
+				}
+				
+				scaledRadius.add(radius);
 			}
-		}	
+			
+			double scaleFactor = 100d / max;
+			
+			for (int i = 0; i < scaledRadius.size(); ++i) {
+				adjustedRadius.add(scaledRadius.get(i) * scaleFactor);
+			}	
+			
+			coins.SetNextBatch(adjustedRadius);
+			
+			coins.SetLargest(1);
+		}
 	};
 	
-	public ImageProcess(TextView label) {
-		this.label = label;
-		
+	public ImageProcess(CoinCounter coins) {
+		this.scaledRadius = new ArrayList<Double>();
+		this.adjustedRadius = new ArrayList<Double>();
+		this.coins = coins; 
 	}
-	
-	
 
 }
