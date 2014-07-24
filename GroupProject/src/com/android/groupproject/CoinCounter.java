@@ -27,7 +27,7 @@ public class CoinCounter {
 	private final double DIME_DIAM = 70.5;
 	private final double PENNY_DIAM = 75.0;
 	
-	private final double ERROR_MARGIN = 1.0;
+	private final double ERROR_MARGIN = 2.0;
 	
 	// Singleton Constructor
 	public static CoinCounter GetCounter() {
@@ -120,7 +120,8 @@ public class CoinCounter {
 			double penny_max, penny_min;
 			double nickel_max, nickel_min;
 			
-			double scale_up = 0;
+			// Not neccessary
+			/*double scale_up = 0;
 			
 			switch (largest) {
 				case 1:
@@ -135,19 +136,19 @@ public class CoinCounter {
 				default:
 					scale_up = 100 - PENNY_DIAM;
 					break;
-			}
+			}*/
 			
-			quarter_max = QUARTER_DIAM + scale_up + ERROR_MARGIN;
-			quarter_min = QUARTER_DIAM + scale_up - ERROR_MARGIN;
+			quarter_max = QUARTER_DIAM + ERROR_MARGIN;
+			quarter_min = QUARTER_DIAM - ERROR_MARGIN;
 			
-			dime_max = DIME_DIAM + scale_up + ERROR_MARGIN;
-			dime_min = DIME_DIAM + scale_up - ERROR_MARGIN;
+			dime_max = DIME_DIAM + ERROR_MARGIN;
+			dime_min = DIME_DIAM - ERROR_MARGIN;
 			
-			penny_max = PENNY_DIAM + scale_up + ERROR_MARGIN;
-			penny_min = PENNY_DIAM + scale_up - ERROR_MARGIN;
+			penny_max = PENNY_DIAM + ERROR_MARGIN;
+			penny_min = PENNY_DIAM - ERROR_MARGIN;
 			
-			nickel_max = NICKLE_DIAM + scale_up + ERROR_MARGIN;
-			nickel_min = NICKLE_DIAM + scale_up - ERROR_MARGIN;
+			nickel_max = NICKLE_DIAM + ERROR_MARGIN;
+			nickel_min = NICKLE_DIAM - ERROR_MARGIN;
 			
 			double size = 0;
 			
