@@ -111,4 +111,11 @@
         </TableRow>
     </TableLayout>
 
+    <Button
+        android:id="@+id/reset"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset" />
+
 </LinearLayout>

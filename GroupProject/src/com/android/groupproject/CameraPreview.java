@@ -15,26 +15,11 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     private Camera mCamera;
     private Camera.Parameters params;
     public int mFrameWidth;
-    public int mFrameHeight;
-    public Camera.ErrorCallback errorCall = new Camera.ErrorCallback() {
-		
-		@Override
-		public void onError(int error, Camera camera) {
-			
-			if (error == Camera.CAMERA_ERROR_SERVER_DIED) {
-				//camera.release();
-				//camera.open();
-			}
-			
-		}
-	};
-    
+    public int mFrameHeight;    
     
     public CameraPreview(Context context, Camera camera) {
         super(context);
         mCamera = camera;
-        
-        camera.setErrorCallback(errorCall);
         
         params = mCamera.getParameters();
     	List<Camera.Size> sizes = params.getSupportedPreviewSizes();

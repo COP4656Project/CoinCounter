@@ -1,0 +1,166 @@
+package com.android.groupproject;
+
+import java.util.ArrayList;
+
+import android.widget.TextView;
+
+public class CoinCounter {
+	private static CoinCounter instance = null;
+	private double changeAmount = 0.0;
+	private int quarterCount = 0;
+	private int nickleCount = 0;
+	private int dimeCount = 0;
+	private int pennyCount = 0;
+	private int largest = 0;
+	private ArrayList<Double> coinList;
+	
+	private TextView quarter;
+	private TextView nickel;
+	private TextView dime;
+	private TextView penny;
+	private TextView total;	
+	
+	private final double QUARTER_DIAM = 95.5;
+	private final double NICKLE_DIAM = 83.5;
+	private final double DIME_DIAM = 70.5;
+	private final double PENNY_DIAM = 75.0;
+	
+	private final double ERROR_MARGIN = 1.0;
+	
+	// Singleton Constructor
+	public static CoinCounter GetCounter() {
+		if (instance == null) {
+			instance = new CoinCounter();
+			return instance;
+		} else {
+			return instance;
+		}
+	}
+	
+	private CoinCounter() {
+		coinList = new ArrayList<Double>();
+	}
+	
+	public void SetNextBatch(ArrayList<Double> coins) {
+		coinList.clear();
+		
+		// Get different coins here
+		coinList = coins;	
+	}
+	
+	public void SetLargest(int i) {
+		// 1 = quarter, 2 = nickle, 3 = penny, 4 = dime
+		largest = i;
+		boolean isSingle = false;
+		UpdateCount(false);
+	}
+	
+	public void SetSingle(int i) {
+		largest = i;
+		boolean isSingle = true;
+		UpdateCount(isSingle);
+	}
+	
+	// When called updates the UI with current state
+	public void UpdateUI() {
+		quarter.setText("" + quarterCount);
+		dime.setText("" + dimeCount);
+		nickel.setText("" + nickleCount);
+		penny.setText("" + pennyCount);
+		total.setText("" + changeAmount);
+	}
+	
+	// Sets the UI elements that this class interacts with
+	public void SetUIElements(TextView quarters, TextView nickles, TextView pennies, 
+			TextView dimes, TextView total) {
+		this.quarter = quarters;
+		this.nickel = nickles;
+		this.dime = dimes;
+		this.penny = pennies;
+		this.total = total;
+	}
+	
+	// Updates the state.
+	private void UpdateCount(boolean isSingle) {
+		if (isSingle) {
+			switch (largest) {
+				case 1:
+					quarterCount += coinList.size();
+					break;
+				case 2:
+					nickleCount += coinList.size();
+					break;
+				case 3:
+					dimeCount += coinList.size();
+					break;
+				default:
+					pennyCount += coinList.size();
+					break;
+			}
+			
+		} else {
+			// Needs to be improved or removed
+			double quarter_max, quarter_min;
+			double dime_max, dime_min;
+			double penny_max, penny_min;
+			double nickel_max, nickel_min;
+			
+			double scale_up = 0;
+			
+			switch (largest) {
+				case 1:
+					scale_up = 100 - QUARTER_DIAM;
+					break;
+				case 2:
+					scale_up = 100 - NICKLE_DIAM;
+					break;
+				case 3:
+					scale_up = 100 - DIME_DIAM;
+					break;
+				default:
+					scale_up = 100 - PENNY_DIAM;
+					break;
+			}
+			
+			quarter_max = QUARTER_DIAM + scale_up + ERROR_MARGIN;
+			quarter_min = QUARTER_DIAM + scale_up - ERROR_MARGIN;
+			
+			dime_max = DIME_DIAM + scale_up + ERROR_MARGIN;
+			dime_min = DIME_DIAM + scale_up - ERROR_MARGIN;
+			
+			penny_max = PENNY_DIAM + scale_up + ERROR_MARGIN;
+			penny_min = PENNY_DIAM + scale_up - ERROR_MARGIN;
+			
+			nickel_max = NICKLE_DIAM + scale_up + ERROR_MARGIN;
+			nickel_min = NICKLE_DIAM + scale_up - ERROR_MARGIN;
+			
+			double size = 0;
+			
+			for (int i = 0; i < coinList.size(); ++i) {
+				size = coinList.get(i);
+				
+				if (size <= quarter_max && size >= quarter_min) {
+					++quarterCount;
+				} else if (size <= dime_max && size >= dime_min) {
+					++dimeCount;
+				} else if (size <= nickel_max && size >= nickel_min) {
+					++nickleCount;
+				} else if (size <= penny_max && size >= penny_min) {
+					++pennyCount;
+				}			
+			}	
+		}
+		
+		UpdateTotal();
+	}
+	
+	// Calculates the total amount of change
+	private void UpdateTotal()
+	{
+		changeAmount += (dimeCount * 0.10)
+				      + (quarterCount * 0.25)
+				      + (pennyCount * 0.01)
+				      + (nickleCount * 0.05)
+				      ;
+	}
+}

@@ -32,21 +32,18 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
 		
 		// Register launch camera Button
 		Button launchCamera = (Button) findViewById(R.id.launch_camera_btn);
+		Button reset = (Button) findViewById(R.id.reset);
 		final Context mainContext = this;
 		
 		coins = CoinCounter.GetCounter();
 		coins.SetUIElements((TextView)findViewById(R.id.quarter_count),
 							(TextView)findViewById(R.id.nickle_count),
 							(TextView)findViewById(R.id.penny_count),
-							(TextView)findViewById(R.id.dime_count)
+							(TextView)findViewById(R.id.dime_count),
+							(TextView)findViewById(R.id.total_text)
 							);
 		
 		launchCamera.setOnClickListener(new OnClickListener() {
@@ -61,26 +58,16 @@ public class MainActivity extends ActionBarActivity {
 			
 		});
 		
-	}
+		reset.setOnClickListener(new OnClickListener() {
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+			@Override
+			public void onClick(View v) {
+				coins.Reset();
+				coins.UpdateUI();				
+			}
+			
+		});
+		
 	}
 	
 	@Override
@@ -88,23 +75,6 @@ public class MainActivity extends ActionBarActivity {
 		super.onResume();
 		if (coins != null) {
 			coins.UpdateUI();
-		}
-	}
-
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main, container,
-					false);
-			return rootView;
 		}
 	}
 

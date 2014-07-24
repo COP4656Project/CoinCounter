@@ -1,0 +1,237 @@
+package com.android.groupproject;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Point;
+import android.hardware.Camera;
+import android.os.Bundle;
+import android.widget.FrameLayout;
+import android.widget.Button;
+import android.widget.PopupWindow;
+import android.view.Display;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+import android.widget.ImageView;
+
+public class CameraActivity extends Activity {
+	private final int QUARTER = 1;
+	private final int NICKEL = 2;
+	private final int DIME = 3;
+	private final int PENNY = 4;
+	private Camera mCamera;
+	private CoinCounter coins;
+	private CameraActivity actContext = this;
+    private CameraPreview mPreview;
+    private ImageProcess process;
+    private Camera.AutoFocusCallback focus = new Camera.AutoFocusCallback() {
+		
+		@Override
+		public void onAutoFocus(boolean success, Camera camera) {
+	        
+	        Display display = getWindowManager().getDefaultDisplay();
+	        Point size = new Point();
+	        display.getSize(size);
+	        final int width = size.x;
+	        
+			camera.takePicture(null, null, process.ProcessCallBack);
+			
+			LayoutInflater inflater = (LayoutInflater)
+				       actContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			View popup = inflater.inflate(R.layout.set_coins, null, false);
+			
+			Button cancel = (Button)popup.findViewById(R.id.cancel);
+			Button sQuarter = (Button)popup.findViewById(R.id.sbtn_quarter);
+			Button sNickel = (Button)popup.findViewById(R.id.sbtn_nickel);
+			Button sDime = (Button)popup.findViewById(R.id.sbtn_dime);
+			Button sPenny = (Button)popup.findViewById(R.id.sbtn_penny);
+			
+			Button lQuarter = (Button)popup.findViewById(R.id.lbtn_quarter);
+			Button lNickel = (Button)popup.findViewById(R.id.lbtn_nickel);
+			Button lDime = (Button)popup.findViewById(R.id.lbtn_dime);
+			Button lPenny = (Button)popup.findViewById(R.id.lbtn_penny);
+			
+			
+			
+			final PopupWindow pw = new PopupWindow(popup, 
+				       width - 40, 
+				       width - 40, 
+				       true);
+			
+			sQuarter.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					coins.SetSingle(QUARTER);
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+			
+			sNickel.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					coins.SetSingle(NICKEL);
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+			
+			sDime.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					coins.SetSingle(DIME);
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+			
+			sPenny.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					coins.SetSingle(PENNY);
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+			
+			lQuarter.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					coins.SetLargest(QUARTER);
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+			
+			lNickel.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					coins.SetLargest(NICKEL);
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+			
+			lDime.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					coins.SetLargest(DIME);
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+			
+			lPenny.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					coins.SetLargest(PENNY);
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+			
+			cancel.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+				    pw.dismiss();
+				    mCamera.startPreview();
+				}
+				
+			});
+		    pw.showAtLocation(actContext.findViewById(R.id.main), Gravity.CENTER, 0, 0); 
+		}
+	};
+	
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+	    super.onCreate(savedInstanceState);
+	    setContentView(R.layout.activity_camera);
+	  
+	    mCamera = null;
+	    
+	    try {
+	        mCamera = Camera.open(); 
+	    	mCamera.setDisplayOrientation(90);	        
+	    }
+	    catch (Exception e){
+	        // Camera is not available (in use or does not exist)
+	    }
+	    
+	    coins = CoinCounter.GetCounter();
+        mPreview = new CameraPreview(this, mCamera);    
+        process = new ImageProcess(coins);
+        
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        
+        
+        // Set height of FrameLayout to ensure aspect ratio is correct
+        int realWidth = size.x;
+        int realHeight = (mPreview.mFrameWidth * realWidth) / mPreview.mFrameHeight;
+        
+        FrameLayout preview = (FrameLayout) findViewById(R.id.camera_layout);
+        android.view.ViewGroup.LayoutParams params = preview.getLayoutParams();
+        
+        params.height = realWidth;
+        params.width = realHeight;        
+        
+        preview.addView(mPreview);
+        Button capture = (Button) findViewById(R.id.capture);
+        
+
+        
+        capture.setOnClickListener(new OnClickListener() {
+       
+			@Override
+			public void onClick(View arg0) {
+				mCamera.autoFocus(focus);
+			
+			}
+	    	   
+	   });
+
+	}
+	
+	@Override
+	public void onPause() {
+		super.onPause();
+		
+		mCamera.release();
+	}
+
+	@Override
+    public void onStop() {
+		super.onStop();
+		
+		mCamera.release();
+	}
+	
+	@Override
+    public void onDestroy() {
+		super.onDestroy();
+		
+		mCamera.release();		
+    }
+
+}

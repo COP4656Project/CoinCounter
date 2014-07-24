@@ -9,12 +9,10 @@ import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import org.opencv.highgui.Highgui;
 import org.opencv.android.Utils;
-import org.opencv.core.Core;
 import org.opencv.android.OpenCVLoader;
 import android.util.Log;
-import android.widget.TextView;
-import android.widget.ImageView;
 
+// Class processes image and 
 public class ImageProcess {
 	public int numberOfCircles = 0;
 	private CoinCounter coins;
@@ -42,9 +40,14 @@ public class ImageProcess {
 			Imgproc.cvtColor(image, image, Imgproc.COLOR_BGR2GRAY);
 			Mat circles = new Mat();
 			
-			// This is working now it seems
-			Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT,1,50,165,50,50,300);
-		
+			// This is working now it seems, the parameters were determined after testing
+			// might be able to improve although it seems that the parameters are sensitive to
+			// the way images are lit and the quality of the camera.
+   			Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT,1,50,165,50,50,300);
+			
+			// The following line does not seem to work as well.
+			//Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT, 1, 20);
+			
 			numberOfCircles = circles.cols();
 			
 			Log.v("cirles","Number of circles " + circles.cols());
@@ -71,8 +74,6 @@ public class ImageProcess {
 			}	
 			
 			coins.SetNextBatch(adjustedRadius);
-			
-			coins.SetLargest(1);
 		}
 	};
 	
