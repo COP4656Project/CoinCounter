@@ -170,7 +170,7 @@ public class CameraActivity extends Activity {
 	    mCamera = null;
 	    
 	    try {
-	        mCamera = Camera.open(); 
+	        mCamera = Camera.open(0); // should allow for devices with front facing cameras to function
 	    	mCamera.setDisplayOrientation(90);	        
 	    }
 	    catch (Exception e){
@@ -206,6 +206,7 @@ public class CameraActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				mCamera.autoFocus(focus);
+				
 			
 			}
 	    	   

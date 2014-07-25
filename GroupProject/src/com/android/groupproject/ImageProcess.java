@@ -38,12 +38,13 @@ public class ImageProcess {
 			Utils.bitmapToMat(myBitmap32, image);
 			
 			Imgproc.cvtColor(image, image, Imgproc.COLOR_BGR2GRAY);
+			//Imgproc.GaussianBlur(image, image, ksize, max);
 			Mat circles = new Mat();
 			
 			// This is working now it seems, the parameters were determined after testing
 			// might be able to improve although it seems that the parameters are sensitive to
 			// the way images are lit and the quality of the camera.
-   			Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT,1,50,165,50,50,300);
+   			Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT,1,50,165,25,50,300);
 			
 			// The following line does not seem to work as well.
 			//Imgproc.HoughCircles(image, circles, Imgproc.CV_HOUGH_GRADIENT, 1, 20);
