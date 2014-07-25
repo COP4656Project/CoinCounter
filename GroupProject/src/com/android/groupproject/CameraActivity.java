@@ -66,7 +66,8 @@ public class CameraActivity extends Activity {
 				public void onClick(View v) {
 					coins.SetSingle(QUARTER);
 				    pw.dismiss();
-				    mCamera.startPreview();
+				    //mCamera.startPreview();
+				    finish();
 				}
 				
 			});
@@ -77,7 +78,8 @@ public class CameraActivity extends Activity {
 				public void onClick(View v) {
 					coins.SetSingle(NICKEL);
 				    pw.dismiss();
-				    mCamera.startPreview();
+				    //mCamera.startPreview();
+				    finish();
 				}
 				
 			});
@@ -88,7 +90,8 @@ public class CameraActivity extends Activity {
 				public void onClick(View v) {
 					coins.SetSingle(DIME);
 				    pw.dismiss();
-				    mCamera.startPreview();
+				    finish();
+				    //mCamera.startPreview();
 				}
 				
 			});
@@ -99,7 +102,8 @@ public class CameraActivity extends Activity {
 				public void onClick(View v) {
 					coins.SetSingle(PENNY);
 				    pw.dismiss();
-				    mCamera.startPreview();
+				    //mCamera.startPreview();
+				    finish();
 				}
 				
 			});
@@ -110,7 +114,8 @@ public class CameraActivity extends Activity {
 				public void onClick(View v) {
 					coins.SetLargest(QUARTER);
 				    pw.dismiss();
-				    mCamera.startPreview();
+				    //mCamera.startPreview();
+				    finish();
 				}
 				
 			});
@@ -121,7 +126,8 @@ public class CameraActivity extends Activity {
 				public void onClick(View v) {
 					coins.SetLargest(NICKEL);
 				    pw.dismiss();
-				    mCamera.startPreview();
+				    //mCamera.startPreview();
+				    finish();
 				}
 				
 			});
@@ -132,7 +138,8 @@ public class CameraActivity extends Activity {
 				public void onClick(View v) {
 					coins.SetLargest(DIME);
 				    pw.dismiss();
-				    mCamera.startPreview();
+				    //mCamera.startPreview();
+				    finish();
 				}
 				
 			});
@@ -143,7 +150,8 @@ public class CameraActivity extends Activity {
 				public void onClick(View v) {
 					coins.SetLargest(PENNY);
 				    pw.dismiss();
-				    mCamera.startPreview();
+				    //mCamera.startPreview();
+				    finish();
 				}
 				
 			});
@@ -198,7 +206,7 @@ public class CameraActivity extends Activity {
         
         preview.addView(mPreview);
         Button capture = (Button) findViewById(R.id.capture);
-        
+        Button backButton = (Button) findViewById(R.id.backBtn);
 
         
         capture.setOnClickListener(new OnClickListener() {
@@ -206,13 +214,20 @@ public class CameraActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				mCamera.autoFocus(focus);
-				
-			
 			}
 	    	   
 	   });
 
+       backButton.setOnClickListener(new OnClickListener() {
+           
+    			@Override
+    			public void onClick(View arg0) {
+    				finish();
+    			}
+       });   
 	}
+	
+	
 	
 	@Override
 	public void onPause() {
