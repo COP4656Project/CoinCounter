@@ -7,7 +7,7 @@
     <string name="init_count">0</string>
     <string name="launch_camera">Launch Camera</string>
     <string name="quarter">Quarters: </string>
-    <string name="nickle">Nickles: </string>
+    <string name="nickle">Nickels: </string>
     <string name="dime">Dimes: </string>
     <string name="penny">Pennies: </string>
     <string name="capture">Capture</string>

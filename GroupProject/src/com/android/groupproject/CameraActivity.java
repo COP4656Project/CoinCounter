@@ -13,24 +13,28 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TextView;
-import android.widget.ImageView;
 
+// Manages the camera activity
 public class CameraActivity extends Activity {
+	// Values of coins 
 	private final int QUARTER = 1;
 	private final int NICKEL = 2;
 	private final int DIME = 3;
 	private final int PENNY = 4;
+	
 	private Camera mCamera;
 	private CoinCounter coins;
 	private CameraActivity actContext = this;
     private CameraPreview mPreview;
     private ImageProcess process;
+    
+    // Callback that takes picture
     private Camera.AutoFocusCallback focus = new Camera.AutoFocusCallback() {
 		
 		@Override
 		public void onAutoFocus(boolean success, Camera camera) {
 	        
+			// Get size of window to set popup size
 	        Display display = getWindowManager().getDefaultDisplay();
 	        Point size = new Point();
 	        display.getSize(size);
@@ -53,13 +57,15 @@ public class CameraActivity extends Activity {
 			Button lDime = (Button)popup.findViewById(R.id.lbtn_dime);
 			Button lPenny = (Button)popup.findViewById(R.id.lbtn_penny);
 			
-			
+			// Set popup size with margin
+			final int MARGIN = 40;
 			
 			final PopupWindow pw = new PopupWindow(popup, 
-				       width - 40, 
-				       width - 40, 
+				       width - MARGIN, 
+				       width - MARGIN, 
 				       true);
 			
+			// Set click listeners
 			sQuarter.setOnClickListener(new OnClickListener() {
 
 				@Override
@@ -165,6 +171,7 @@ public class CameraActivity extends Activity {
 				}
 				
 			});
+			// Show popup
 		    pw.showAtLocation(actContext.findViewById(R.id.main), Gravity.CENTER, 0, 0); 
 		}
 	};
@@ -175,6 +182,7 @@ public class CameraActivity extends Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.activity_camera);
 	  
+	    // Setup camera
 	    mCamera = null;
 	    
 	    try {

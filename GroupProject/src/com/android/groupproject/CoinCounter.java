@@ -1,12 +1,13 @@
 package com.android.groupproject;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 
 import android.widget.TextView;
 
+// Keeps track of coins and manages UI elements
 public class CoinCounter {
+	// Set initial values
 	private static CoinCounter instance = null;
 	private double changeAmount = 0.0;
 	private int quarterCount = 0;
@@ -16,17 +17,20 @@ public class CoinCounter {
 	private int largest = 0;
 	private ArrayList<Double> coinList;
 	
+	// UI Elements
 	private TextView quarter;
 	private TextView nickel;
 	private TextView dime;
 	private TextView penny;
 	private TextView total;	
 	
+	// Relative Diameters of coins
 	private final double QUARTER_DIAM = 95.5;
 	private final double NICKLE_DIAM = 83.5;
 	private final double DIME_DIAM = 70.5;
 	private final double PENNY_DIAM = 75.0;
 	
+	// Error of margin for circle detection
 	private final double ERROR_MARGIN = 2.0;
 	
 	// Singleton Constructor
@@ -39,10 +43,12 @@ public class CoinCounter {
 		}
 	}
 	
+	// Private Constructor
 	private CoinCounter() {
 		coinList = new ArrayList<Double>();
 	}
 	
+	// Sets next list of radius found by camera
 	public void SetNextBatch(ArrayList<Double> coins) {
 		coinList.clear();
 		
@@ -50,10 +56,12 @@ public class CoinCounter {
 		coinList = coins;	
 	}
 	
+	// Returns number of coins found
 	public int GetLastCount() {
 		return coinList.size();
 	}
 	
+	// Experimental, sets coin that has largest radius
 	public void SetLargest(int i) {
 		// 1 = quarter, 2 = nickle, 4 = penny, 3 = dime
 		largest = i;
@@ -61,7 +69,9 @@ public class CoinCounter {
 		UpdateCount(isSingle);
 	}
 	
+	// Used for homogeneous sets of coins
 	public void SetSingle(int i) {
+		// 1 = quarter, 2 = nickle, 4 = penny, 3 = dime
 		largest = i;
 		boolean isSingle = true;
 		UpdateCount(isSingle);
@@ -87,6 +97,7 @@ public class CoinCounter {
 		this.total = total;
 	}
 	
+	// Resets the state of CoinCounter
 	public void Reset() {
 		quarterCount = 0;
 		nickleCount = 0;
@@ -97,6 +108,7 @@ public class CoinCounter {
 	
 	// Updates the state.
 	private void UpdateCount(boolean isSingle) {
+		// Used if coins set is homogeneous
 		if (isSingle) {
 			switch (largest) {
 				case 1:
@@ -114,30 +126,13 @@ public class CoinCounter {
 			}
 			
 		} else {
-			// Needs to be improved or removed
+			// Needs to be improved or removed, experimental
 			double quarter_max, quarter_min;
 			double dime_max, dime_min;
 			double penny_max, penny_min;
 			double nickel_max, nickel_min;
 			
-			// Not neccessary
-			/*double scale_up = 0;
-			
-			switch (largest) {
-				case 1:
-					scale_up = 100 - QUARTER_DIAM;
-					break;
-				case 2:
-					scale_up = 100 - NICKLE_DIAM;
-					break;
-				case 3:
-					scale_up = 100 - DIME_DIAM;
-					break;
-				default:
-					scale_up = 100 - PENNY_DIAM;
-					break;
-			}*/
-			
+			// Sets error of margin for relative coin diameters we are looking for
 			quarter_max = QUARTER_DIAM + ERROR_MARGIN;
 			quarter_min = QUARTER_DIAM - ERROR_MARGIN;
 			
@@ -152,6 +147,10 @@ public class CoinCounter {
 			
 			double size = 0;
 			
+			// Iterate over coin radius list and look for radius
+			// that fit in range. Does not seem to work well because
+			// the typcial error of margin from the camera is greater
+			// then the relative differences in sizes between the coins
 			for (int i = 0; i < coinList.size(); ++i) {
 				size = coinList.get(i);
 				
@@ -167,6 +166,7 @@ public class CoinCounter {
 			}	
 		}
 		
+		// Updates total
 		UpdateTotal();
 	}
 	

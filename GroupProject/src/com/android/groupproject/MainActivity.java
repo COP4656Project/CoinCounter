@@ -1,29 +1,14 @@
 package com.android.groupproject;
 
-import java.io.IOException;
-
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.content.Context;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 import android.content.Intent;
 import com.android.groupproject.CameraActivity;
-import android.os.Build;
-import org.opencv.imgproc.Imgproc;
-import org.opencv.core.Mat;
-import org.opencv.highgui.Highgui;
-import org.opencv.android.Utils;
-import org.opencv.core.Core;
-import org.opencv.android.OpenCVLoader;
 
 public class MainActivity extends ActionBarActivity {
 	private CoinCounter coins;
@@ -38,7 +23,10 @@ public class MainActivity extends ActionBarActivity {
 		Button reset = (Button) findViewById(R.id.reset);
 		final Context mainContext = this;
 		
+		// Call singleton constructor for CoinCounter
 		coins = CoinCounter.GetCounter();
+		
+		// Set UI Elements
 		coins.SetUIElements((TextView)findViewById(R.id.quarter_count),
 							(TextView)findViewById(R.id.nickle_count),
 							(TextView)findViewById(R.id.penny_count),
@@ -46,6 +34,7 @@ public class MainActivity extends ActionBarActivity {
 							(TextView)findViewById(R.id.total_text)
 							);
 		
+		// Set launch camera click listener
 		launchCamera.setOnClickListener(new OnClickListener() {
 
 			@Override
