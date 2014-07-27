@@ -13884,3 +13884,30 @@ Binding(CTRL+SHIFT+ARROW_RIGHT,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.jdt.ui.javaEditorScope,,cocoa,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2014-07-27 10:34:59.077
+!MESSAGE An internal error occurred during: "Re-indexing repository work".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.core.internal.resources.WorkspaceRoot.findContainersForLocationURI(WorkspaceRoot.java:89)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.findContainersForLocationURI(WorkspaceRoot.java:80)
+	at org.eclipse.egit.core.IteratorService.findContainer(IteratorService.java:59)
+	at org.eclipse.egit.core.AdaptableFileTreeIterator.createSubtreeIterator(AdaptableFileTreeIterator.java:81)
+	at org.eclipse.jgit.treewalk.AbstractTreeIterator.createSubtreeIterator(AbstractTreeIterator.java:528)
+	at org.eclipse.jgit.treewalk.TreeWalk.enterSubtree(TreeWalk.java:908)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:566)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:287)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiff(IndexDiffCacheEntry.java:343)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$4(IndexDiffCacheEntry.java:334)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2014-07-27 10:51:11.663 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/adamgreenstein/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/adamgreenstein/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-07-27 10:51:19.985
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

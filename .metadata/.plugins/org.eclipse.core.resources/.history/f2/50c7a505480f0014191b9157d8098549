@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">Coin Counter</string>
-    <string name="action_settings">Settings</string>
-    <string name="init_total">Amount: $0.00</string>
-    
-
-</resources>
